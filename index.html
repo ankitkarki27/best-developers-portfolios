@@ -1,158 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developer Portfolios</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-      
-      body {
-        font-family: 'Inter', sans-serif;
-        scroll-behavior: smooth;
-      }
-      
-      .nav-glass {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      }
-      
-      .section-padding {
-        padding-top: 80px;
-        margin-top: -80px;
-      }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-      /* Mobile menu styles */
-      .mobile-menu {
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-      }
-      
-      .mobile-menu.open {
-        transform: translateX(0);
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-      /* Responsive table */
-      @media (max-width: 768px) {
-        .table-container {
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
-        
-        table {
-          min-width: 600px;
+
+        .section-padding {
+            padding-top: 80px;
+            margin-top: -80px;
         }
-      }
+
+        /* Mobile menu styles */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Responsive table */
+        @media (max-width: 768px) {
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                min-width: 600px;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900">
     <!-- Mobile Menu Button -->
     <button id="mobileMenuButton" class="lg:hidden fixed top-6 right-6 z-50 p-2 bg-white rounded-lg shadow-lg">
-      <i class="fas fa-bars text-gray-700 text-xl"></i>
+        <i class="fas fa-bars text-gray-700 text-xl"></i>
     </button>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-white z-40 lg:hidden flex flex-col items-center justify-center space-y-8">
-      <button id="closeMenu" class="absolute top-6 right-6 p-2">
-        <i class="fas fa-times text-gray-700 text-2xl"></i>
-      </button>
-      <a href="#showcase" class="text-2xl font-medium text-gray-700 hover:text-black">showcase</a>
-      <a href="#about" class="text-2xl font-medium text-gray-700 hover:text-black">About</a>
-      <a href="#contact" class="text-2xl font-medium text-gray-700 hover:text-black">Contact</a>
+    <div id="mobileMenu"
+        class="mobile-menu fixed inset-0 bg-white z-40 lg:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="closeMenu" class="absolute top-6 right-6 p-2">
+            <i class="fas fa-times text-gray-700 text-2xl"></i>
+        </button>
+        <a href="#portfolio" class="text-2xl font-medium text-gray-700 hover:text-black">Portfolios</a>
+        <a href="#about" class="text-2xl font-medium text-gray-700 hover:text-black">About</a>
+        <a href="#contact" class="text-2xl font-medium text-gray-700 hover:text-black">Contact</a>
     </div>
 
     <!-- Navigation -->
     <nav class="nav-glass sticky top-4 mx-4 rounded-2xl z-30 mt-2 max-w-5xl mx-auto lg:block hidden">
-      <div class="px-6 flex justify-between items-center h-16">
-        <a href="#header"><h1 class="text-xl">
-          <span class="font-bold text-gray-800">Portfolio</span> Gallery
-        </h1></a>
-        <div class="space-x-8 text-base font-medium">
-          <a href="#showcase" class="text-gray-700 hover:text-black transition-all duration-300">Showcase</a>
-          <a href="#about" class="text-gray-700 hover:text-black transition-all duration-300">About</a>
-          <a href="#contact" class="text-gray-700 hover:text-black transition-all duration-300">Contact</a>
+        <div class="px-6 flex justify-between items-center h-16">
+            <a href="#header">
+                <h1 class="text-xl">
+                    <span class="font-bold text-gray-800">Portfolio</span> Gallery
+                </h1>
+            </a>
+            <div class="space-x-8 text-base font-medium">
+                <a href="#portfolio" class="text-gray-700 hover:text-black transition-all duration-300">Portfolio</a>
+                <a href="#about" class="text-gray-700 hover:text-black transition-all duration-300">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-black transition-all duration-300">Contact</a>
+            </div>
         </div>
-      </div>
     </nav>
 
     <!-- Header -->
     <header id="header" class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-left">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Developer Portfolios</h2>
-      <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
-        A curated collection of inspiring developer portfolio designs from around the world.
-      </p>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Developer Portfolios</h2>
+        <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+            A curated collection of inspiring developer portfolio designs from around the world.
+        </p>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
-      <div id="showcase" class="section-padding">
-        <div class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
-          <div class="table-container">
-            <table class="w-full text-sm sm:text-base">
-              <thead class="bg-gray-50">
-                <tr>
-                  <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">#</th>
-                  <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">Developer</th>
-                  <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">Portfolio</th>
-                  <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">Tech Stack</th>
-                </tr>
-              </thead>
-              <tbody id="portfolioTable" class="divide-y divide-gray-100"></tbody>
-            </table>
-          </div>
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 mb-12 sm:mb-20">
+        <div id="portfolio" class="section-padding">
+            <div class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <div class="table-container">
+                    <table class="w-full text-sm sm:text-base">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">#
+                                </th>
+                                <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">
+                                    Developer</th>
+                                <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">
+                                    Link</th>
+                                <th class="py-3 sm:py-4 px-4 sm:px-6 border-b text-left font-semibold text-gray-900">
+                                    Tech Stack</th>
+                            </tr>
+                        </thead>
+                        <tbody id="portfolioTable" class="divide-y divide-gray-100"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-      </div>
     </main>
 
     <!-- About Section -->
+    <!-- About Section -->
     <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
-      <div class="section-padding">
-        <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">About This Collection</h3>
-        <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
-          <p>
-            This gallery showcases exceptional developer portfolios that demonstrate creative approaches 
-            to personal branding and technical presentation. Each portfolio represents a unique 
-            perspective on how developers can present their work and skills.
-          </p>
-          <p>
-            The collection serves as inspiration for developers looking to create their own 
-            online presence, highlighting different design patterns, technical implementations, 
-            and content strategies.
-          </p>
+        <div class="section-padding">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">About This Collection</h3>
+            <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+                <p>
+                    This gallery Portfolios real developer portfolios discovered through GitHub, featuring
+                    actual working developers and their personal websites. Each portfolio represents how
+                    developers present themselves professionally in the real world.
+                </p>
+                <p>
+                    All portfolios are automatically discovered from GitHub profiles, ensuring they belong
+                    to active developers with recent contributions and established online presence.
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <div class="flex items-start gap-3">
+                        <span class="text-lg">🔍</span>
+                        <div>
+                            <strong class="block mb-1">Live Data:</strong>
+                            Portfolios are regularly updated from GitHub API, featuring developers with active profiles
+                            and personal websites.
+                            <p class="mt-2 text-gray-600">
+                                Found a broken or irrelevant portfolio?
+                                <a href="#contact" class="text-blue-600 hover:underline font-medium">
+                                    Report it to us
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
-      <div class="section-padding">
-        <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Get In Touch</h3>
-        <div class="space-y-4 sm:space-y-6">
-          <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
-            Have an outstanding developer portfolio you'd like to feature or want to collaborate? 
-            I'm always interested in discovering exceptional work and connecting with fellow developers.
-          </p>
-          <a href="mailto:ankitkarki8088@gmail.com"
-             class="inline-flex items-center gap-3 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl hover:bg-gray-800 transition-all duration-300 text-base sm:text-lg font-medium">
-             <i class="fas fa-envelope"></i>
-             Email Me
-          </a>
+        <div class="section-padding">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Get In Touch</h3>
+            <div class="space-y-4 sm:space-y-6">
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
+                    Have an outstanding developer portfolio you'd like to feature or want to collaborate?
+                    I'm always interested in discovering exceptional work and connecting with fellow developers.
+                </p>
+                <a href="mailto:ankitkarki8088@gmail.com"
+                    class="inline-flex items-center gap-3 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl hover:bg-gray-800 transition-all duration-300 text-base sm:text-lg font-medium">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-center border-t border-gray-200">
-      <p class="text-gray-600 text-sm sm:text-base">
-        Made by <a href="https://www.karkiankit.com.np/" class="text-black font-medium hover:underline">Ankit Karki</a>
-      </p>
+        <p class="text-gray-600 text-sm sm:text-base">
+            Made by <a href="https://www.karkiankit.com.np/" class="text-black font-medium hover:underline">Ankit
+                Karki</a>
+        </p>
     </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
