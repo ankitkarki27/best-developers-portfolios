@@ -1263,15 +1263,7 @@ const portfolios = [
             
         ]
     },
-    {
-        "name": "Olamide Adeyi",
-        "link": "https://olamideadeyi.com",
-        "stacks": [
-            "Vue",
-            "NuxtJS",
-            "GSAP"
-        ]
-    },
+   
     {
         "name": "Greg Ives",
         "link": "https://gregives.co.uk",
