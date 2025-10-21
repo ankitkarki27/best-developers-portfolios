@@ -897,7 +897,7 @@ const portfolios = [
     },
     {
         "name": "Alfaizkhan Pathan",
-        "link": "https://Portfolio",
+        "link": "https://alfaizkhan.github.io/",
         "stacks": [
             "Flutter",
             "Dart",
@@ -1820,17 +1820,6 @@ const portfolios = [
         ]
     },
     {
-        "name": "Aliyah Adefolake",
-        "link": "https://aliyahadefolake.com",
-        "stacks": [
-            "ReactJS",
-            "Gatsby",
-            "SASS",
-            "GSAP",
-            "Contentful"
-        ]
-    },
-    {
         "name": "Travis Fischer",
         "link": "https://transitivebullsh.it",
         "stacks": [
@@ -1976,33 +1965,9 @@ const portfolios = [
         "stacks": [
             "Nuxt.js",
             "Node.js",
-            "core-js",
-            "Vue.js",
-            "VideoJS",
-            "Firebase",
-            "HSTS",
-            "Open Graph",
-            "HTTP/3",
-            "Webpack",
-            "PWA"
         ]
     },
-    {
-        "name": "Alec Babala",
-        "link": "https://alecbabala.com",
-        "stacks": [
-            "Next.js",
-            "Node.js",
-            "core-js",
-            "React",
-            "HSTS",
-            "Open Graph",
-            "Webpack",
-            "MobX",
-            "GSAP",
-            "Contentful"
-        ]
-    },
+
     {
         "name": "Gavin Nelson",
         "link": "https://nelson.co",
